@@ -45,14 +45,25 @@ print("np.all -", np.any(arr1 < 0))
 print("AND operation", arr1[(arr1%2==0) & (arr1>=22)])
 print("OR operation", arr1[(arr1%2==0) | (arr1>=50)])
 
+print("---------------------MATHEMATICAL OPERATIONS---------------")
 print("sine pi/6, pi/4, pi/3, pi/2 -", np.sin([np.pi/6, np.pi/4, np.pi/3, np.pi/2])) # Radians
 print("Inverse sine ", np.arcsin([0.5, 0.70710678, 0.8660254, 1.0])) # Radians
 # arcsin is a multivalued function. For each x there are infinitely many numbers z such that sin(x)=z. The convention is to return the angle z whose real part lies in [-pi/2, pi/2]
 print("hypot function ", np.hypot(3*np.ones((3, 3)), 4*np.ones((3, 3))))
 # Pythogoras Theorem. Given the “legs” of a right triangle, return its hypotenuse.
+print("arr1 =", arr1)
+print("arr1.max() -", arr1.max())
+print("index of max element, arr.argmax() -", arr1.argmax())
+print("arr1.min() -", arr1.min())
+print("index of min element, arr.argmin() -", arr1.argmin())
+print("sum of array, arr.sum()", arr1.sum())
+print("variance of array elements, arr.var()", arr1.var())
+print("mean of array, arr.mean()", arr1.mean())
+print("standard deviation of array elements, arr.std()", arr1.std())
 
-print("like sorted", np.sort(arr1))
-print("like sort", arr1.sort())
-print("search element in sorted array", np.searchsorted(arr1, 47))
-#In numpy, the best way search a element is to sort array first and then search it
+print("arr1 =", arr1)
+print("sort the array and return index of a element", np.searchsorted(arr1, 47))
+print("like sorted method of python", np.sort(arr1))
+print("like sort method, arr.sort() returns", arr1.sort(), "but sorts the array")
+
 
