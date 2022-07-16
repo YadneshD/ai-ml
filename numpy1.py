@@ -41,7 +41,7 @@ print("replace elems of multple indices by multiple values", arr1)
 print("---------------------BOOLEAN OPERATIONS---------------")
 print("remove elems using conditions", arr1[arr1%2==1])
 print("np.any -", np.any(arr1 > 20))
-print("np.all -", np.any(arr1 < 0))
+print("np.all -", np.all(arr1 < 0))
 print("AND operation", arr1[(arr1%2==0) & (arr1>=22)])
 print("OR operation", arr1[(arr1%2==0) | (arr1>=50)])
 
@@ -64,6 +64,6 @@ print("standard deviation of array elements, arr.std()", arr1.std())
 print("arr1 =", arr1)
 print("sort the array and return index of a element", np.searchsorted(arr1, 47))
 print("like sorted method of python", np.sort(arr1))
-print("like sort method, arr.sort() returns", arr1.sort(), "but sorts the array")
+print("like sort method, arr.sort() returns", arr1.sort(), "but sorts the array itself")
 
 
