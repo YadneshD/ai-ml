@@ -3,7 +3,7 @@ import numpy as np
 # https://betterprogramming.pub/numpy-illustrated-the-visual-guide-to-numpy-3b1d4976de1d
 print(np.__version__)
 
-
+print("NUMPY LOOSES ITS EFFICIENCY WHEN YOU CHANGE DATA TYPES OF ITS ARRAYS MORE OFTEN")
 zeros1 = np.zeros(shape=(1,2,3), dtype=np.float32)
 print("zeros1 = ", zeros1)
 ones1 = np.ones(shape=(3,2,1), dtype=int)
@@ -38,7 +38,32 @@ print("replace elems of multple indices by single value", arr1)
 arr1[7:9] = [47, 56]
 print("replace elems of multple indices by multiple values", arr1)
 
-print("---------------------BOOLEAN OPERATIONS---------------")
+print("*******************************************************************************")
+print("NUMPY LOOSES ITS EFFICIENCY WHEN YOU CHANGE DATA TYPES OF ITS ARRAYS MORE OFTEN")
+print("*******************************************************************************")
+print()
+print("-----------------------SPECIAL OPERATIONS-----------------")
+print("arr1 =", arr1)
+print("where with condition and values", np.where(arr1%2==0,99, 150)) # It works like ternary opeartor, assigns values based on conditions.
+print("where with  only conditions", np.where(arr1%2==0)) # When only condition is provided, this function works like np.asarray(condition).nonzero()
+print("non-zero", np.nonzero(arr1)) # Returns array of indices of elements that are non zero
+print("clip", np.clip(arr1, 19, 26)) # Given an interval, values outside the interval are clipped to the interval edges. 
+
+print("-----------------------MATHEMATICAL OPERATIONS-----------------")
+print("arr1 =", arr1)
+arr2 = np.arange(60, 70)
+print("arr2 =", arr2)
+print("add", arr1+arr2)
+print("subtract", arr1-arr2)
+print("multiply", arr1*arr2)
+print("div", arr2/arr1)
+print("floor div", arr2//arr1)
+print("mod", arr2%arr1)
+print("sqrt of arr2", np.sqrt(arr2)) # square root of each elem in array
+print("exponential of arr1", np.exp(arr1)) # e^elem 
+print("arr1**3", arr1**3)
+print("-----------------------BOOLEAN OPERATIONS-----------------")
+
 print("remove elems using conditions", arr1[arr1%2==1])
 print("np.any -", np.any(arr1 > 20))
 print("np.all -", np.all(arr1 < 0))
@@ -65,5 +90,3 @@ print("arr1 =", arr1)
 print("sort the array and return index of a element", np.searchsorted(arr1, 47))
 print("like sorted method of python", np.sort(arr1))
 print("like sort method, arr.sort() returns", arr1.sort(), "but sorts the array itself")
-
-
